@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std ;
+
+struct Node
+{
+    int data;
+    Node *next;
+};
+void(Node *hed_ref,int newdata){
+Node *newnode=new node();
+
+newnode->data=newdata;
+newnode->next= *hed_ref
+
+*hed_ref=newnode;
+};
