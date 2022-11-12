@@ -1,0 +1,54 @@
+#include<iostream>
+using namespace std;
+
+class Node{
+
+public:
+ 
+ int data ;
+ Node *next;
+
+};
+
+void insertionAtmiddle(Node* pre_node, int d){
+if (pre_node==NULL)
+{
+    cout<<"Th pervious Null contain the NULL"
+    <<endl;
+    return ;
+ }
+
+Node* temp=new Node ();
+temp->data=d;
+temp->next=pre_node->next;
+pre_node->next=temp;
+
+}
+void printlist(Node *head){
+while (head!=NULL)
+{
+    cout<<head->data<<" ";
+    head=head->next;
+    cout<<endl;
+}
+
+}
+int main(){
+
+Node* head=new Node();
+Node* node2=new Node();
+
+head->data=5;
+head->next=node2;
+
+node2->data=7;
+node2->next=NULL;
+cout<<"Before the insertion"<<endl;
+printlist(head);
+cout<<"After the insertion"<<endl;
+
+insertionAtmiddle(node2,6);
+ printlist(head);
+
+ return 0;
+}
